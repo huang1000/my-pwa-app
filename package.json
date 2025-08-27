@@ -1,0 +1,20 @@
+{
+  "name": "my-pwa-app",
+  "private": true,
+  "version": "1.0.0",
+  "description": "A minimal Progressive Web App example",
+  "workspaces": ["src", "server"],
+  "scripts": {
+    "dev:frontend": "npm --workspace src run dev",
+    "dev:backend": "npm --workspace server start",
+    "dev": "npm run dev:backend & npm run dev:frontend"
+  },
+  "keywords": [
+    "PWA",
+    "progressive",
+    "web",
+    "application"
+  ],
+  "author": "Your Name",
+  "license": "MIT"
+}

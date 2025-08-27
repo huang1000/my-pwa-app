@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My PWA App</title>
+
+    <!-- link manifest -->
+    <link rel="manifest" href="manifest.json">
+    <!-- Theme colors for splash screen -->
+    <meta name="theme-color" content="#2196f3" />
+    <!-- Styles -->
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <h1>Welcome to My App</h1>
+
+    <!-- New LLM input section -->
+    <div>
+        <h2>LLM Playground</h2>
+        <textarea id="prompt" rows="4" cols="50" placeholder="Type your prompt here..."></textarea>
+        <br>
+        <input id="system-prompt" type="text" placeholder="System prompt (optional)" />
+        <br>
+        <label>Temperature: <input id="temperature" type="number" value="0.1" step="0.1" min="0" max="1" /></label>
+        <br>
+        <button id="run-llm">Run LLM</button>
+    </div>
+
+    <!-- Display LLM response -->
+    <div id="llm-response" style="margin-top:20px; white-space:pre-wrap;"></div>
+
+    <hr />
+
+    <button id="subscribe">Subscribe to Notifications</button>
+    <button id="send">Send Background Sync</button>
+
+    <p>This app works offline, with push notifications & background sync!</p>
+    <p>Now connected to Hugging Face Spaces LLM via @gradio/client</p>
+
+    <script type="module" src="app.js"></script>
+</body>
+</html>
